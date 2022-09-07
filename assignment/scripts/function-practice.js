@@ -97,10 +97,10 @@ let loopArray1= [2, 3, 5, 9];
 console.log(find(2, loopArray1))
 
 let loopArray2= ['here', 'there', 'everywhere'];
-console.log(find('anywhere', loopArray1))
+console.log(find('anywhere', loopArray2))
 
-let loopArray3= ['Brandon', 'Phoenix', 'Gwen'];
-console.log(find('Fido', loopArray3))
+let loopArray3= [9, 11, 2];
+console.log(find('9', loopArray3))
 
 
 
@@ -110,7 +110,7 @@ console.log(find('Fido', loopArray3))
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-if(string[0]= letter){
+if(string[0]=== letter){
   return true;
 }else{
   return false;
@@ -141,7 +141,49 @@ console.log(sumAll(sumArray2));
 //     return an empty array. Note: The input array should not change.
 
 
+function positiveArray(array){
+  let positiveNum = [];
+  if(positiveNum){
+    positiveNum = array.filter(num => num > 0);  
+    return positiveNum;
+  }else{
+    return positiveNum;
+  }
+}
+
+let numArray1 =[ 2, 10, -1, -9];
+console.log(positiveArray(numArray1), numArray1);
+
+let numArray2 =[-.01, .25, 100, 92, -8];
+console.log(positiveArray(numArray2), numArray2);
+
+let numArray3 = [];
+console.log(positiveArray([]), numArray3);
+
+
+
+
+
+
+
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+//I selected a problem from CodeWars. The challenge is to figure out how many pages need to be printed for the class. If an argument is less than 0, the function should return 0. 
+
+
+
+function paperwork(pages, classmates) {
+  if(pages<0 || classmates<0){
+    return 0;
+  }else{
+    let pagesToPrint = pages*classmates;
+    return pagesToPrint;
+  }
+    
+}
+
+console.log("I should print", paperwork(4, 2), "pages.");
+console.log("I should print", paperwork( -1, 2), "pages.");
