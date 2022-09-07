@@ -19,26 +19,38 @@ function helloName( name ) {
 }
 // Remember to call the function to test
 console.log(helloName('Brandon'));
+console.log(helloName('Phoenix'));
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
+function addNumbers( firstNumber, secondNumber ) {
   // return firstNumber + secondNumber;
+  let result = firstNumber + secondNumber;
+  return result;
 }
+
+console.log(addNumbers(2, 5));
+console.log(addNumbers(127, -5));
+
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree(num1, num2, num3){
+  let result = num1 * num2 * num3;
+  return result;
 }
+console.log(multiplyThree(2, 2, 2));
+console.log(multiplyThree(10, 5, 2));
 
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
+  }else {
+    return false;
   }
-    return;
+    
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
@@ -52,6 +64,11 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 function getLast( array ) {
 
 }
+
+let practiceArray1=['first', 'middle', 'last'];
+console.log(practiceArray1.length-1)
+
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
