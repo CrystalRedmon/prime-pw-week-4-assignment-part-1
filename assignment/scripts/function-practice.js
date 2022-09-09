@@ -18,8 +18,8 @@ function helloName( name ) {
   return `Hello, ${name}!`;
 }
 // Remember to call the function to test
-console.log(helloName('Brandon'));
-console.log(helloName('Phoenix'));
+console.log('Test- should say "Hello, Brandon!"', helloName('Brandon'));
+console.log('Test- should say "Hello, Phoenix!"', helloName('Phoenix'));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
@@ -28,8 +28,8 @@ function addNumbers( firstNumber, secondNumber ) {
   return result;
 }
 
-console.log(addNumbers(2, 5));
-console.log(addNumbers(127, -5));
+console.log("Test- should result in 7", addNumbers(2, 5));
+console.log("Test- should result in 10",addNumbers(15, -5));
 
 
 
@@ -38,8 +38,8 @@ function multiplyThree(num1, num2, num3){
   let result = num1 * num2 * num3;
   return result;
 }
-console.log(multiplyThree(2, 2, 2));
-console.log(multiplyThree(10, 5, 2));
+console.log("Test- should result in 8",multiplyThree(2, 2, 2));
+console.log("Test- should result in 100",multiplyThree(10, 5, 2));
 
 
 // 5. Function that will return true if a number is positive, 
@@ -75,8 +75,8 @@ let array2=['first', 'middle', 'last'];
 let array3=['beginning', 'middle', 'end']
 
 console.log(getLast(array1));
-console.log(getLast(array2));
-console.log(getLast(array3));
+console.log('Test- result should be "last"', getLast(array2));
+console.log('Test- result should be "end"', getLast(array3));
 
 
 // 7. Function to find a value in an array. Return true if the 
@@ -94,13 +94,13 @@ for(let i=0; i<array.length; i++){
 };
 
 let loopArray1= [2, 3, 5, 9];
-console.log(find(2, loopArray1))
+console.log('Test- expect true' , find(2, loopArray1))
 
 let loopArray2= ['here', 'there', 'everywhere'];
-console.log(find('anywhere', loopArray2))
+console.log('Test- expect false', find('anywhere', loopArray2))
 
 let loopArray3= [9, 11, 2];
-console.log(find('9', loopArray3))
+console.log('Test- expect false', find('9', loopArray3))
 
 
 
@@ -131,10 +131,10 @@ for(let i=0; i<array.length; i++){
 }
 
 let sumArray1 = [2, 2, 2, 2, 2];
-console.log(sumAll(sumArray1));
+console.log('Test- expect 10', sumAll(sumArray1));
 
 let sumArray2 =[1, 9, 8, 2];
-console.log(sumAll(sumArray2));
+console.log('Test- expect 20',sumAll(sumArray2));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
@@ -152,10 +152,10 @@ function positiveArray(array){
 }
 
 let numArray1 =[ 2, 10, -1, -9];
-console.log(positiveArray(numArray1), numArray1);
+console.log("New array:", positiveArray(numArray1), "Old array:", numArray1);
 
 let numArray2 =[-.01, .25, 100, 92, -8];
-console.log(positiveArray(numArray2), numArray2);
+console.log("New array:",positiveArray(numArray2), "Old array:", numArray2);
 
 let numArray3 = [];
 console.log(positiveArray([]), numArray3);
